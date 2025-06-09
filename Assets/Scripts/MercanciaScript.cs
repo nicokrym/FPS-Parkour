@@ -7,12 +7,10 @@ public class MercanciaScript : MonoBehaviour
 {
     public int precio;
     public MoneyManager moneyManager;
-    public TextMeshProUGUI TxtCartel;
 
     void Start()
     {
         moneyManager = FindObjectOfType<MoneyManager>();
-        TxtCartel = FindObjectOfType<TextMeshProUGUI>();
     }
 
     void OnCollisionEnter(Collision collision)
@@ -21,12 +19,12 @@ public class MercanciaScript : MonoBehaviour
         {
             if (moneyManager.updateMoney(-precio))
             {
-                TxtCartel.text = gameObject.name;
+                Debug.Log(gameObject.name);
                 Destroy(gameObject);
             }
             else
             {
-                TxtCartel.text = "No es posible realizar la transacción, fondos insuficientes.";
+                Debug.Log("No es posible realizar la transacción, fondos insuficientes.");
             }
         };
     }

@@ -2,26 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoneyManager : MonoBehaviour
+public class HealthManager : MonoBehaviour
 {
-    public int money;
+    public int health;
     public uiManager uiManager;
 
     void Start()
     {
-        uiManager.UpdateMoneyText(100);
+        uiManager.UpdateHealthText(100);
     }
 
-    public bool updateMoney(int amount)
+    public bool UpdateHealth(int points)
     {
-        if (money + amount < 0)
+        if (health + points < 0)
         {
             return false;
         }
         else
         {
-            money += amount;
-            uiManager.UpdateMoneyText(money);
+            health += points;
+            uiManager.UpdateHealthText(points);
             return true;
         }
     }

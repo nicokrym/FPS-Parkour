@@ -3,12 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class UIMANAGER : MonoBehaviour
+public class uiManager : MonoBehaviour
 {
-    public TextMeshProUGUI TxtCartel;
+    public TextMeshProUGUI TxtMoney;
+    public TextMeshProUGUI TxtHealth;
 
     void Start()
     {
-        TxtCartel.text = "";
+        TxtMoney.text = "";
+        TxtHealth.text = "";
+    }
+    
+    public void UpdateMoneyText(int money)
+    {
+        TxtMoney.text = "$ " + money;
+    }
+
+    public void UpdateHealthText(int health)
+    {
+        TxtHealth.text = "HP " + health;
     }
 }
