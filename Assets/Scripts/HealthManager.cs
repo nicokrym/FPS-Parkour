@@ -5,7 +5,7 @@ using UnityEngine;
 public class HealthManager : MonoBehaviour
 {
     public int health;
-    public uiManager uiManager;
+    public UIManager uiManager;
 
     void Start()
     {

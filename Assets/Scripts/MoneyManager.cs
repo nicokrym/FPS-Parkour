@@ -5,9 +5,9 @@ using UnityEngine;
 public class MoneyManager : MonoBehaviour
 {
     public int money;
-    public uiManager uiManager;
+    public UIManager uiManager;
 
-    void Start()
+    private void Start()
     {
         uiManager.UpdateMoneyText(100);
     }

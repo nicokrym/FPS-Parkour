@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class uiManager : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
     public TextMeshProUGUI TxtMoney;
     public TextMeshProUGUI TxtHealth;
